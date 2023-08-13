@@ -99,12 +99,10 @@ sdk第一期支持的组件为Gin-Web、gRpc、go-micro、go-microv2、go-microv
 
 
 
-图1 Seamiter设计模型 https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 功能模块
 
 
-图2 Seamiter功能模块 https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 目前Seamiter划分为基础模块、限流模块、熔断模块、热点模块、Mock模块、重试模块、灰度模块、压测模块及防护模块，依次解释如下：
 
@@ -146,7 +144,6 @@ sdk第一期支持的组件为Gin-Web、gRpc、go-micro、go-microv2、go-microv
 架构V1
 
 
-图3 架构V1 https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 seamiter最初架构如图，主要包含portal服务、Admin Service服务、RuleService服务及Client
 
@@ -169,7 +166,6 @@ Portal:主要为用户提供操作Portal、权限、操作历史等操作
 
 
 
-图4 架构V2https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 和V1架构相比，此处引入了Register Service，同时Client的注册不是在通过内网IP保持，而是修改了广域网（此处为内网），这样跨机房访问就不会再有问题了。
 
@@ -194,7 +190,6 @@ seamiter的工作机制如下：
 整体分析
 
 
-图5 Seamiter整体作用分析图https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 在业务接入Seamiter-SDK后，Seamiter会拦截业务业务请求，并依次经过如上规则槽位。
 
@@ -217,7 +212,6 @@ Mock的主要目的在依赖没有Ready的情况下，通过插桩Mock掉相关�
 
 原理分析
 
-图6 Mock规则原理分析https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 （1）seamiter对于各种组件增加了对应的拦截器，拦截器会对请求参数、请求头等信息填充给规则槽
 
@@ -298,7 +292,6 @@ QA的自动化测试是我们项目日常防护的手段，这个流程的目的
 原理分析
 
 
-图7 灰度规则原理分析https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 （1）seamiter会在接口调用（consumer）前增加拦截
 
@@ -322,7 +315,6 @@ QA的自动化测试是我们项目日常防护的手段，这个流程的目的
 
 
 
-图8 标签灰度效果https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 针对条件路由，seamiter支持多条件匹配，如需要通过匹配来源(FromServer)和参数值（param1 value=1），同时支持AND/OR操作。
 
@@ -330,7 +322,6 @@ QA的自动化测试是我们项目日常防护的手段，这个流程的目的
 
 
 
-图9 权重路由原理https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 权重的大致思路是桶算法，
 
@@ -457,7 +448,6 @@ QA的自动化测试是我们项目日常防护的手段，这个流程的目的
 原理分析
 
 
-图11 seamiter流量整形https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 网络流量的到达具有随机性，而系统处理是有限的。对于业务，每次大促的流量都会数倍于日常流量，这种突发的流量会对系统的稳定性造成威胁。
 
@@ -519,7 +509,6 @@ seamiter-sdk底层是通过滑动窗口来实现QPS统计的，滑动窗口的�
 
 
 
-图13 匀速token https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 可以理解为均匀限流，如果阈值设置为10，那么就是0.1秒下发一个请求，意味着100ms下发一个请求
 
@@ -616,7 +605,6 @@ Token WarmUp策略：
 
 
 
-图14 Warmup Token的生成算法模型https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 X轴：令牌桶数量
 
@@ -632,7 +620,6 @@ warmUpPeriodSec：系统预热时间，单位秒
 
 
 
-图15 Warmup Token预热时间内Token生成https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 假设当前令牌桶桶的令牌数为X，X在warningToken和maxToken之间，则生成一个Token的间隔为
 
@@ -640,7 +627,6 @@ warmUpPeriodSec：系统预热时间，单位秒
 
 
 
-图16 Warmup Token稳定后Token生成https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 当预热时间后，生成一个Token的时间间隔为 稳定时的时间间隔，
 
@@ -734,7 +720,6 @@ seamiter会监控系统应用内部及下游的响应时间和异常比例，当
 热点
 
 
-图19 热点防护 https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 热点防护主要是针对热点资源的保护，这种资源并不是某一个固定的接口，而可能是针对特定的资源接口参数的防护，如热点账户或者热点商品等。
 
@@ -776,7 +761,6 @@ Seamiter-server会主动拉取业务的pb proto file文件，并解析pb描述�
 Seamiter同时接口的版本变更历史，以便业务快速生成接口文档。
 
 
-图20 Seamiter接口管理原理https://app.diagrams.net/?libs=general;er#G1RAipnvYgxyJ0KSEnnZRtYYyIhhP1fP9A
 
 场景分析
 场景1：快速生成接口文档及接口变更历史
@@ -1631,8 +1615,6 @@ xorm	支持	ALL,需要手动埋点,待支持自动埋点
 
 应用源码->go.mod→添加SDK包→go mod tidy & go mod vendor
 
-git.garena.com/honggang.liu/seamiter-go v0.1.231-release
-git.garena.com/honggang.liu/seamiter-go/pkg/adapters/micro v0.0.0-20230510103846-b0eb15d7eabb
 步骤三：增加seamiter-sdk对应的配置文件（默认使用sea.yaml）
 
 sea:
@@ -1667,8 +1649,7 @@ sea.dashboard.openConnectDashboard：是否连接dashboard获取规则，如果�
 步骤三：初始化
 
 import (
-sea "git.garena.com/honggang.liu/seamiter-go/api"
-"git.garena.com/honggang.liu/seamiter-go/logging"
+
 )
 
 func init() {

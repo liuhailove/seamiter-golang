@@ -1,0 +1,266 @@
+# git.garena.com/honggang.liu/seamiter-go v0.1.171-release
+## explicit; go 1.14
+git.garena.com/honggang.liu/seamiter-go/api
+git.garena.com/honggang.liu/seamiter-go/core/base
+git.garena.com/honggang.liu/seamiter-go/core/circuitbreaker
+git.garena.com/honggang.liu/seamiter-go/core/config
+git.garena.com/honggang.liu/seamiter-go/core/flow
+git.garena.com/honggang.liu/seamiter-go/core/gray
+git.garena.com/honggang.liu/seamiter-go/core/hotspot
+git.garena.com/honggang.liu/seamiter-go/core/hotspot/cache
+git.garena.com/honggang.liu/seamiter-go/core/isolation
+git.garena.com/honggang.liu/seamiter-go/core/log
+git.garena.com/honggang.liu/seamiter-go/core/log/metric
+git.garena.com/honggang.liu/seamiter-go/core/mock
+git.garena.com/honggang.liu/seamiter-go/core/retry
+git.garena.com/honggang.liu/seamiter-go/core/retry/backoff
+git.garena.com/honggang.liu/seamiter-go/core/retry/classify
+git.garena.com/honggang.liu/seamiter-go/core/retry/context
+git.garena.com/honggang.liu/seamiter-go/core/retry/policy
+git.garena.com/honggang.liu/seamiter-go/core/retry/rule
+git.garena.com/honggang.liu/seamiter-go/core/retry/support
+git.garena.com/honggang.liu/seamiter-go/core/stat
+git.garena.com/honggang.liu/seamiter-go/core/stat/base
+git.garena.com/honggang.liu/seamiter-go/core/system
+git.garena.com/honggang.liu/seamiter-go/core/system_metric
+git.garena.com/honggang.liu/seamiter-go/exporter/metric
+git.garena.com/honggang.liu/seamiter-go/exporter/metric/prometheus
+git.garena.com/honggang.liu/seamiter-go/ext/datasource
+git.garena.com/honggang.liu/seamiter-go/ext/datasource/file
+git.garena.com/honggang.liu/seamiter-go/ext/datasource/util
+git.garena.com/honggang.liu/seamiter-go/ext/micro
+git.garena.com/honggang.liu/seamiter-go/logging
+git.garena.com/honggang.liu/seamiter-go/transport/common/command
+git.garena.com/honggang.liu/seamiter-go/transport/common/command/handler
+git.garena.com/honggang.liu/seamiter-go/transport/common/transport
+git.garena.com/honggang.liu/seamiter-go/transport/common/transport/config
+git.garena.com/honggang.liu/seamiter-go/transport/common/transport/endpoint
+git.garena.com/honggang.liu/seamiter-go/transport/http
+git.garena.com/honggang.liu/seamiter-go/transport/http/command
+git.garena.com/honggang.liu/seamiter-go/transport/http/heartbeat
+git.garena.com/honggang.liu/seamiter-go/transport/http/heartbeat/client
+git.garena.com/honggang.liu/seamiter-go/transport/http/metric
+git.garena.com/honggang.liu/seamiter-go/transport/http/request
+git.garena.com/honggang.liu/seamiter-go/transport/http/rsp
+git.garena.com/honggang.liu/seamiter-go/transport/http/rule
+git.garena.com/honggang.liu/seamiter-go/util
+# github.com/StackExchange/wmi v0.0.0-20190523213315-cbe66965904d
+## explicit
+github.com/StackExchange/wmi
+# github.com/beorn7/perks v1.0.1
+## explicit; go 1.11
+github.com/beorn7/perks/quantile
+# github.com/buger/jsonparser v1.1.1
+## explicit; go 1.13
+github.com/buger/jsonparser
+# github.com/cespare/xxhash/v2 v2.1.1
+## explicit; go 1.11
+github.com/cespare/xxhash/v2
+# github.com/davecgh/go-spew v1.1.1
+## explicit
+github.com/davecgh/go-spew/spew
+# github.com/fatih/structs v1.1.0
+## explicit
+github.com/fatih/structs
+# github.com/go-basic/uuid v1.0.0
+## explicit; go 1.14
+github.com/go-basic/uuid
+# github.com/go-ole/go-ole v1.2.4
+## explicit; go 1.12
+github.com/go-ole/go-ole
+github.com/go-ole/go-ole/oleutil
+# github.com/golang/protobuf v1.5.2
+## explicit; go 1.9
+github.com/golang/protobuf/jsonpb
+github.com/golang/protobuf/proto
+github.com/golang/protobuf/ptypes
+github.com/golang/protobuf/ptypes/any
+github.com/golang/protobuf/ptypes/duration
+github.com/golang/protobuf/ptypes/timestamp
+# github.com/google/uuid v1.2.0
+## explicit
+github.com/google/uuid
+# github.com/json-iterator/go v1.1.10
+## explicit; go 1.12
+github.com/json-iterator/go
+# github.com/kr/text v0.2.0
+## explicit
+# github.com/matttproud/golang_protobuf_extensions v1.0.1
+## explicit
+github.com/matttproud/golang_protobuf_extensions/pbutil
+# github.com/miekg/dns v1.1.43
+## explicit; go 1.14
+github.com/miekg/dns
+# github.com/modern-go/concurrent v0.0.0-20180306012644-bacd9c7ef1dd
+## explicit
+github.com/modern-go/concurrent
+# github.com/modern-go/reflect2 v1.0.1
+## explicit
+github.com/modern-go/reflect2
+# github.com/oxtoacart/bpool v0.0.0-20190530202638-03653db5a59c
+## explicit; go 1.12
+github.com/oxtoacart/bpool
+# github.com/patrickmn/go-cache v2.1.0+incompatible
+## explicit
+github.com/patrickmn/go-cache
+# github.com/pkg/errors v0.9.1
+## explicit
+github.com/pkg/errors
+# github.com/pmezard/go-difflib v1.0.0
+## explicit
+github.com/pmezard/go-difflib/difflib
+# github.com/prometheus/client_golang v1.9.0
+## explicit; go 1.11
+github.com/prometheus/client_golang/prometheus
+github.com/prometheus/client_golang/prometheus/internal
+github.com/prometheus/client_golang/prometheus/promhttp
+# github.com/prometheus/client_model v0.2.0
+## explicit; go 1.9
+github.com/prometheus/client_model/go
+# github.com/prometheus/common v0.15.0
+## explicit; go 1.11
+github.com/prometheus/common/expfmt
+github.com/prometheus/common/internal/bitbucket.org/ww/goautoneg
+github.com/prometheus/common/model
+# github.com/prometheus/procfs v0.2.0
+## explicit; go 1.12
+github.com/prometheus/procfs
+github.com/prometheus/procfs/internal/fs
+github.com/prometheus/procfs/internal/util
+# github.com/shirou/gopsutil/v3 v3.21.6
+## explicit; go 1.15
+github.com/shirou/gopsutil/v3/cpu
+github.com/shirou/gopsutil/v3/internal/common
+github.com/shirou/gopsutil/v3/load
+github.com/shirou/gopsutil/v3/mem
+github.com/shirou/gopsutil/v3/net
+github.com/shirou/gopsutil/v3/process
+# github.com/stretchr/objx v0.1.1
+## explicit
+github.com/stretchr/objx
+# github.com/stretchr/testify v1.7.0
+## explicit; go 1.13
+github.com/stretchr/testify/assert
+github.com/stretchr/testify/mock
+# github.com/tklauser/go-sysconf v0.3.6
+## explicit; go 1.13
+github.com/tklauser/go-sysconf
+# github.com/tklauser/numcpus v0.2.2
+## explicit; go 1.11
+github.com/tklauser/numcpus
+# go-micro.dev/v4 v4.9.0
+## explicit; go 1.17
+go-micro.dev/v4/broker
+go-micro.dev/v4/client
+go-micro.dev/v4/codec
+go-micro.dev/v4/codec/bytes
+go-micro.dev/v4/codec/grpc
+go-micro.dev/v4/codec/json
+go-micro.dev/v4/codec/jsonrpc
+go-micro.dev/v4/codec/proto
+go-micro.dev/v4/codec/protorpc
+go-micro.dev/v4/debug/log
+go-micro.dev/v4/debug/trace
+go-micro.dev/v4/errors
+go-micro.dev/v4/logger
+go-micro.dev/v4/metadata
+go-micro.dev/v4/registry
+go-micro.dev/v4/registry/cache
+go-micro.dev/v4/selector
+go-micro.dev/v4/server
+go-micro.dev/v4/transport
+go-micro.dev/v4/util/addr
+go-micro.dev/v4/util/backoff
+go-micro.dev/v4/util/buf
+go-micro.dev/v4/util/mdns
+go-micro.dev/v4/util/net
+go-micro.dev/v4/util/pool
+go-micro.dev/v4/util/registry
+go-micro.dev/v4/util/ring
+go-micro.dev/v4/util/signal
+go-micro.dev/v4/util/socket
+go-micro.dev/v4/util/tls
+# go.uber.org/atomic v1.6.0
+## explicit; go 1.13
+go.uber.org/atomic
+# go.uber.org/multierr v1.5.0
+## explicit; go 1.12
+go.uber.org/multierr
+# golang.org/x/net v0.0.0-20210510120150-4163338589ed
+## explicit; go 1.17
+golang.org/x/net/bpf
+golang.org/x/net/http/httpguts
+golang.org/x/net/http2
+golang.org/x/net/http2/h2c
+golang.org/x/net/http2/hpack
+golang.org/x/net/idna
+golang.org/x/net/internal/iana
+golang.org/x/net/internal/socket
+golang.org/x/net/ipv4
+golang.org/x/net/ipv6
+# golang.org/x/sync v0.0.0-20210220032951-036812b2e83c
+## explicit
+golang.org/x/sync/singleflight
+# golang.org/x/sys v0.0.0-20210502180810-71e4cd670f79
+## explicit; go 1.12
+golang.org/x/sys/internal/unsafeheader
+golang.org/x/sys/unix
+golang.org/x/sys/windows
+# golang.org/x/text v0.3.6
+## explicit; go 1.11
+golang.org/x/text/secure/bidirule
+golang.org/x/text/transform
+golang.org/x/text/unicode/bidi
+golang.org/x/text/unicode/norm
+# google.golang.org/genproto v0.0.0-20190819201941-24fa4b261c55
+## explicit
+google.golang.org/genproto/googleapis/rpc/status
+# google.golang.org/grpc v1.26.0
+## explicit; go 1.11
+google.golang.org/grpc/codes
+google.golang.org/grpc/connectivity
+google.golang.org/grpc/grpclog
+google.golang.org/grpc/internal
+google.golang.org/grpc/status
+# google.golang.org/protobuf v1.26.0
+## explicit; go 1.9
+google.golang.org/protobuf/encoding/protojson
+google.golang.org/protobuf/encoding/prototext
+google.golang.org/protobuf/encoding/protowire
+google.golang.org/protobuf/internal/descfmt
+google.golang.org/protobuf/internal/descopts
+google.golang.org/protobuf/internal/detrand
+google.golang.org/protobuf/internal/encoding/defval
+google.golang.org/protobuf/internal/encoding/json
+google.golang.org/protobuf/internal/encoding/messageset
+google.golang.org/protobuf/internal/encoding/tag
+google.golang.org/protobuf/internal/encoding/text
+google.golang.org/protobuf/internal/errors
+google.golang.org/protobuf/internal/filedesc
+google.golang.org/protobuf/internal/filetype
+google.golang.org/protobuf/internal/flags
+google.golang.org/protobuf/internal/genid
+google.golang.org/protobuf/internal/impl
+google.golang.org/protobuf/internal/order
+google.golang.org/protobuf/internal/pragma
+google.golang.org/protobuf/internal/set
+google.golang.org/protobuf/internal/strs
+google.golang.org/protobuf/internal/version
+google.golang.org/protobuf/proto
+google.golang.org/protobuf/reflect/protodesc
+google.golang.org/protobuf/reflect/protoreflect
+google.golang.org/protobuf/reflect/protoregistry
+google.golang.org/protobuf/runtime/protoiface
+google.golang.org/protobuf/runtime/protoimpl
+google.golang.org/protobuf/types/descriptorpb
+google.golang.org/protobuf/types/known/anypb
+google.golang.org/protobuf/types/known/durationpb
+google.golang.org/protobuf/types/known/timestamppb
+# gopkg.in/check.v1 v1.0.0-20201130134442-10cb98267c6c
+## explicit; go 1.11
+# gopkg.in/fsnotify.v1 v1.4.7
+## explicit
+gopkg.in/fsnotify.v1
+# gopkg.in/yaml.v3 v3.0.0-20210107192922-496545a6307b
+## explicit
+gopkg.in/yaml.v3

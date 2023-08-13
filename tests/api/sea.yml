@@ -1,0 +1,16 @@
+version: "v1"
+sea:
+  app:
+    name: "gococo-server"
+    type: 0
+  log:
+    dir: "sea"
+    usePid: false
+    metric:
+      singleFileMaxSize: 52428800
+      maxFileCount: 7
+      flushIntervalSec: 1
+  dashboard:
+    server: http://localhost:8080
+    proxyUrl: test
+    openConnectDashboard: false

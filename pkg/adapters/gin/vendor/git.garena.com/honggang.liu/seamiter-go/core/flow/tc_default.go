@@ -1,0 +1,52 @@
+package flow
+
+import "git.garena.com/honggang.liu/seamiter-go/core/base"
+
+type DirectTrafficShapingCalculator struct {
+	owner     *TrafficShapingController
+	threshold float64
+}
+
+func NewDirectTrafficShapingCalculator(owner *TrafficShapingController, threshold float64) *DirectTrafficShapingCalculator {
+	return &DirectTrafficShapingCalculator{
+		owner:     owner,
+		threshold: threshold,
+	}
+}
+
+func (d *DirectTrafficShapingCalculator) CalculateAllowedTokens(uint32, int32) float64 {
+	return d.threshold
+}
+
+func (d *DirectTrafficShapingCalculator) BoundOwner() *TrafficShapingController {
+	return d.owner
+}
+
+type RejectTrafficShapingChecker struct {
+	owner *TrafficShapingController
+	rule  *Rule
+}
+
+func NewRejectTrafficShapingChecker(owner *TrafficShapingController, rule *Rule) *RejectTrafficShapingChecker {
+	return &RejectTrafficShapingChecker{
+		owner: owner,
+		rule:  rule,
+	}
+}
+
+func (d *RejectTrafficShapingChecker) BoundOwner() *TrafficShapingController {
+	return d.owner
+}
+
+func (d *RejectTrafficShapingChecker) DoCheck(resStat base.StatNode, batchCount uint32, threshold float64) *base.TokenResult {
+	metricReadonlyStat := d.BoundOwner().boundStat.readOnlyMetric
+	if metricReadonlyStat == nil {
+		return nil
+	}
+	curCount := float64(metricReadonlyStat.GetSum(base.MetricEventPass))
+	if curCount+float64(batchCount) > threshold {
+		msg := "flow reject check blocked"
+		return base.NewTokenResultBlockedWithCause(base.BlockTypeFlow, msg, d.rule, curCount)
+	}
+	return nil
+}

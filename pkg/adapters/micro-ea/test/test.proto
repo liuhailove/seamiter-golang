@@ -1,0 +1,16 @@
+syntax = "proto3";
+package proto;
+option go_package = "tests/adapter/micro/proto;proto";
+
+service Test {
+  rpc Ping(Request) returns (Response) {}
+}
+
+
+message Request {
+  string userName = 1;
+}
+
+message Response {
+  string result = 1;
+}

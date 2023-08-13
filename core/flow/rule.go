@@ -2,8 +2,9 @@ package flow
 
 import (
 	"fmt"
-	"github.com/liuhailove/seamiter-golang/util"
+
 	jsoniter "github.com/json-iterator/go"
+	"github.com/liuhailove/seamiter-golang/util"
 )
 
 // RelationStrategy indicates the flow control strategy based on the relation of invocations.

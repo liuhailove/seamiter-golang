@@ -3,12 +3,14 @@ package gin
 import (
 	"bytes"
 	"errors"
+	"net/http"
+	"strings"
+
+	"github.com/gin-gonic/gin"
+
 	sea "github.com/liuhailove/seamiter-golang/api"
 	"github.com/liuhailove/seamiter-golang/core/base"
 	"github.com/liuhailove/seamiter-golang/core/config"
-	"github.com/gin-gonic/gin"
-	"net/http"
-	"strings"
 )
 
 const (
